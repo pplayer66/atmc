@@ -34,6 +34,9 @@ ul{
 .row > div{
 	float: left;
 }
+.row div:first-child{
+	margin-left: 0;
+}
 .section-content-form{
 	border-top: 1px solid #e5e5e5;
 	padding-top: 60px;
@@ -57,6 +60,22 @@ ul{
 }
 .col-2-30:nth-last-child(1){
 	margin-left: 30px;
+}
+.col-6-20{
+	position: relative;
+	width: calc((100% - 100px) / 6);
+	margin-left: 20px;
+	background: #CF4647;
+	height: 100px;
+	border-radius: 3px;
+}
+.col-6-img{
+	position: absolute;
+	width: 60px;
+	height: auto;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 .contact-form{
 	position: relative;
@@ -107,7 +126,7 @@ ul{
 }
 .benefit-block-item{
 	position: relative;
-	height: 200px;
+	height: 150px;
 	text-align: center;
 }
 .benefit-container{
@@ -123,6 +142,9 @@ ul{
 .benefit-text{
 	font-weight: 300;
 	color: #777;
+}
+.section-benefits{
+	margin-top: 500px;
 }
 .section-col-4{
 	width: 25%;
@@ -263,7 +285,7 @@ ul{
 	float: left;
 }
 .logo-img{
-	height: 90px;
+	height: 130px;
 	width: auto;
 	display: block;
 }
@@ -330,7 +352,7 @@ ul{
 	opacity: 0;
 	right: 15px;
 	top: 200%;
-	width: 70%;
+	width: 60%;
 	text-align: right;
 	padding: 15px;
 	color: #EE3524;
@@ -348,8 +370,8 @@ ul{
 }
 .page-banner{
 	position: relative;
-	height: 650px;
-	line-height: 650px;
+	height: 500px;
+	line-height: 500px;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -362,12 +384,20 @@ ul{
 	width: 100%;
 	line-height: 1.4;
 	text-align: center;
+	top: 70px;
+}
+.logo-wrapper{
+
+}
+.logo-title{
+	font-weight: 400;
+	font-size: 20px;
 }
 .arrow-down{
 	line-height: 1;
 	position: absolute;
 	left: 50%;
-	bottom: 30px;
+	bottom: 10px;
 	width: 40px;
 	text-align: center;
 	font-size: 50px;
@@ -433,12 +463,22 @@ ul{
 	background: #1C3F94;
 	opacity: 0.6;
 }
+.section-col-overlay{
+	position: absolute;
+	padding: 30px;
+	font-weight: 300;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background: rgba(0, 0, 0, .6);
+}
 .overlay-top{
 background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0), rgba(238,53,36,0.8));
 opacity: 0.7;
 }
 .price-list{
-	margin-top: 550px;
+	padding: 60px 0;
 	text-align: center;
 }
 .price-list-button{
@@ -476,23 +516,27 @@ opacity: 0.7;
 .company-info{
 	position: relative;
 	height: 350px;
-	line-height: 350px;
+	/*line-height: 350px;*/
 	background: #CF4647;
-	padding-left: 5%;
-	padding-right: 5%;
 }
 .company-info-container{
-	position: relative;
+	position: absolute;
+	padding: 0 30px;
+	top: 50%;
+	transform: translateY(-50%);
 	line-height: 1.2em;
-	display: inline-block;
-	vertical-align: middle;
+	
+}
+.company-info-text2{
+	margin-top: 20px;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 300;
 }
 .company-info-text{
-	margin-top: 20px;
-	line-height: 1em;
 	color: #fff;
-	font-size: 1.2em;
-	font-weight: 300;
+	font-size: 16px;
+	font-weight: 400;
 }
 .company-info-title{
 	font-size: 30px;

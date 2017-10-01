@@ -14,10 +14,12 @@ html.loading(lang='en')
 	body
 		.wrapper
 			#header
-				.container
+				.container(style='width:1200px').clearfix
 					.header.header-left
-						a.logo(href='http://www.atmc.kz')
-							img.logo-img(src='img/logo.png')
+							.logo-wrapper.clearfix
+								a.logo(href='http://www.atmc.kz')
+									img.logo-img(src='img/logo.png')
+							h2.logo-title ТОО "Almaty Trade & Management Consulting"
 					.header.header-center
 						ul.nav-menu
 							.nav-menu-item
@@ -34,19 +36,20 @@ html.loading(lang='en')
 							span Позвоните нам
 							.phone-number-drop
 								.phome-number-item +7 (777) 801-83-83
+								.phone-number-item +7 (727) 383-18-46
 			.header.header-sticky
 			.page-banner
 				.overlay
 				.overlay.overlay-top
 				.page-banner-inner
 					.container
-						h1.banner-title Спецтехника оптом и в розницу
+						h1.banner-title Продажа и аренда спецтехники
 						div.order-button Оставьте заявку
 						.price-container
 							.price-download
 								i.fa.fa-download
 								a.price-button Прайс-лист
-				a.arrow-down
+				a.arrow-down.nav-link(href='#company')
 					i.fa.fa-angle-down
 			.content
 				.section.section-comnpany#company
@@ -57,75 +60,35 @@ html.loading(lang='en')
 								.section-col.section-col-2.company-info
 									.company-info-container
 										h3.company-info-title ATM consulting
-										.company-info-text Наша компания предлагает своим клиентам только высококачественную, надежную и многофункциональную спецтехнику широкого профиля. Наши клиенты знают, что такое доверие и надежный поставщик уже не первый год.
+										p.company-info-text2 Наша компания предлагает своим клиентам только высококачественную, надежную и многофункциональную спецтехнику широкого профиля. Наши клиенты знают, что такое доверие и надежный поставщик уже не первый год.
 								.section-col.section-col-2.company-info
 									.section-col-bgimg(style='background-image:url(img/banner3.jpg)')
-				.section.section-benefits(style='background:#fff')
-					.container
-						h3.section-title Почему мы
-						.section-content
-							p.content-text Гибкие условия сотрудничества, демократичная цена и качественный сервис - только малая часть всех выгод, которые Вы получите от партнерства с нашей компанией. С нами Вы обретете уверенность в том, что наша техника прослужит​ вам долго и качественно.
-							.row.clearfix
-								.col-3.benefit-block-item
-									.benefit-container
-										img.icon-benefit(src='icons/assortment.svg')
-										h4.benefit-title Большой ассортимент
-										p.benefit-text Огромный ассортимент продукции
-								.col-3.benefit-block-item
-									.benefit-container
-										img.icon-benefit(src='icons/garanty.svg')
-										h4.benefit-title Гарантия качества
-										p.benefit-text Гарантии качества товара
-								.col-3.benefit-block-item
-									.benefit-container
-										img.icon-benefit(src='icons/payment.svg')
-										h4.benefit-title Способы оплаты
-										p.benefit-text Наиболее удобные для Вас способы оплаты
-							.row.clearfix
-								.col-3.benefit-block-item
-									.benefit-container
-										img.icon-benefit(src='icons/service.svg')
-										h4.benefit-title Обслуживание
-										p.benefit-text Длительное сервисное обслуживание
-								.col-3.benefit-block-item
-									.benefit-container
-										img.icon-benefit(src='icons/suppliers.svg')
-										h4.benefit-title Крупные поставщики
-										p.benefit-text Несколько поставщиков из Китая
-								.col-3.benefit-block-item
-									.benefit-container
-										img.icon-benefit(src='icons/shipping.svg')
-										h4.benefit-title Транспортировка
-										p.benefit-text Доставку спецтехники в любой регион СНГ
-				.section.section-brands#machinery
-					.container
-						.section-content
-							h3.section-title Спецтехника
-							.section-row.clearfix(style='height:200px;line-height:200px;background:#fff;')
-								.section-col.section-col-4
-									.section-col-img-container
-										img.section-col-img(src='img/shacman.png')
-									.brand-link-container
-										a.brand-link(href='http://www.shacman.com/' target='_blank') Подробнее
-								.section-col.section-col-4
-									.section-col-img-container
-										img.section-col-img(src='img/howo.png', style='height:80px;width:100px')
-									.brand-link-container
-										a.brand-link(href='http://www.snsc-group.com/' target='_blank') Подробнее
-								.section-col.section-col-4
-									.section-col-img-container
-										img.section-col-img(src='img/faw.png' style='height:80px;width:100px')
-									.brand-link-container
-										a.brand-link(href='http://www.china-faw.com/' target='_blank') Подробнее
-								.section-col.section-col-4.col-last
-									.section-col-img-container
-										img.section-col-img(src='img/xcmg.png')
-									.brand-link-container
-										a.brand-link(href='http://www.xcmg.com/ru-cis/' target='_blank') Подробнее
-				.section.section-products
+									.section-col-overlay
+										p.company-info-text(style='font-size:20px;margin-bottom:20px') Что мы предлагаем вам
+										p.company-info-text Занимаясь поставкой спецтехники в Казахстан и страны СНГ уже не первый год, мы выработали своеобразный принцип работы с нашими клиентами, который обеспечивает 100% эффективный отклик даже в крупных корпораций. У нас заказывать всегда легко, быстро и удобно. Для Вас мы не просто рядовой поставщик, а компания которая обеспечивает:​
+										p.company-info-text - Надежную поставку любой спецтехники;​
+										p.company-info-text - Полезное сотрудничество с постоянными явными выгодами;​
+										p.company-info-text - Постоянную поддержку и обратную связь;​
+										p.company-info-text - Длительное и беспрерывное обслуживание.
+				.section.section-products#machinery
 					.container
 						.section-content.section-content-products
-							h3.section-title Мы предлагаем
+							h3.section-title Спецтехника
+							.row.clearfix
+								.col-6-20
+									img.col-6-img(src='icons/betonovoz.png')
+								.col-6-20
+									img.col-6-img(src='icons/traktor.png')
+								.col-6-20
+									img.col-6-img(src='icons/samosval.png')
+								.col-6-20
+									img.col-6-img(src='icons/avtokran.png')
+								.col-6-20
+									img.col-6-img(src='icons/katok.png')
+								.col-6-20
+									img.col-6-img(src='icons/eskavator.png')
+							.price-list
+								a.price-list-button Скачать прайс-лист
 							.section-row.clearfix
 								.section-col.section-col-7
 									span.product-name Бетоновоз
@@ -183,8 +146,43 @@ html.loading(lang='en')
 										.product-container-info
 											h3.product-info-title Экскаватор
 											p.product-info-text Экскава́тор — основной тип землеройных машин, оснащённых ковшом. Основным назначением является разработка грунтов (горных пород, полезных ископаемых) и погрузка сыпучих материалов. Главным отличием одноковшового экскаватора от других землеройных машин является то, что экскавация (выемка) грунта производится подвижным рабочим органом при неподвижном шасси. Поворот ковша на разгрузку также производится при стоящей машине.
-							.price-list
-								a.price-list-button Скачать прайс-лист
+				.section.section-benefits(style='background:#fff')
+					.container
+						h3.section-title Почему мы
+						.section-content
+							p.content-text Гибкие условия сотрудничества, демократичная цена и качественный сервис - только малая часть всех выгод, которые Вы получите от партнерства с нашей компанией. С нами Вы обретете уверенность в том, что наша техника прослужит​ вам долго и качественно.
+							.row.clearfix
+								.col-3.benefit-block-item
+									.benefit-container
+										img.icon-benefit(src='icons/assortment.svg')
+										h4.benefit-title Большой ассортимент
+										p.benefit-text Огромный ассортимент продукции
+								.col-3.benefit-block-item
+									.benefit-container
+										img.icon-benefit(src='icons/garanty.svg')
+										h4.benefit-title Гарантия качества
+										p.benefit-text Гарантии качества товара
+								.col-3.benefit-block-item
+									.benefit-container
+										img.icon-benefit(src='icons/payment.svg')
+										h4.benefit-title Способы оплаты
+										p.benefit-text Наиболее удобные для Вас способы оплаты
+							.row.clearfix
+								.col-3.benefit-block-item
+									.benefit-container
+										img.icon-benefit(src='icons/service.svg')
+										h4.benefit-title Обслуживание
+										p.benefit-text Длительное сервисное обслуживание
+								.col-3.benefit-block-item
+									.benefit-container
+										img.icon-benefit(src='icons/suppliers.svg')
+										h4.benefit-title Крупные поставщики
+										p.benefit-text Несколько поставщиков из Китая
+								.col-3.benefit-block-item
+									.benefit-container
+										img.icon-benefit(src='icons/shipping.svg')
+										h4.benefit-title Транспортировка
+										p.benefit-text Доставку спецтехники в любой регион СНГ
 				.section.section-form#contacts
 					.container
 						.section-content.section-content-form
@@ -223,9 +221,13 @@ html.loading(lang='en')
 				.container
 					.row.clearfix
 						.col-4
-							.col-footer-item
-								i.fa.fa-lg.fa-phone-square
-								span +7 (777) 801-83-83
+							.col-footer-item.row.clearfix
+								.icon-wrapper
+									i.fa.fa-lg.fa-phone-square
+								.info-wrapper
+									span +7 (777) 801-83-83
+									br
+									span +7 (727) 383-18-46
 						.col-4
 							.col-footer-item
 								i.fa.fa-lg.fa-map-marker
