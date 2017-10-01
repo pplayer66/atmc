@@ -4,8 +4,9 @@ html.loading(lang='en')
 		meta(charset='utf-8')
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 		title Продажа спецтехники оптом и в розницу
-		link(href="https://fonts.googleapis.com/css?family=Play:400,700&amp;subset=cyrillic" rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700" rel="stylesheet")
 		link(href='./css/styles.css' rel='stylesheet')
+		script(src="./libs/jquery-3.2.1.min.js")
 		//- link(href='./css/media.css' rel='stylesheet')
 		script(src="https://use.fontawesome.com/48ee0f2c73.js")
 		//- script(type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js")
@@ -20,20 +21,19 @@ html.loading(lang='en')
 					.header.header-center
 						ul.nav-menu
 							.nav-menu-item
-								a(href='') Главная
+								a.nav-link(href='#header') Главная
 							.nav-menu-item
-								a(href='') О компании
+								a.nav-link(href='#company') О компании
 							.nav-menu-item
-								a(href='') Спецтехника
+								a.nav-link(href='#machinery') Спецтехника
 							.nav-menu-item
-								a(href='') Контакты
+								a.nav-link(href='#contacts') Контакты
 					.header.header-right
 						.phone-number
 							i.fa.fa-lg.fa-phone
 							span Позвоните нам
 							.phone-number-drop
-								.phome-number-item 8 (701) 170 21 32
-								.phome-number-item 8 (702) 194 23 24
+								.phome-number-item +7 (777) 801-83-83
 			.header.header-sticky
 			.page-banner
 				.overlay
@@ -42,22 +42,25 @@ html.loading(lang='en')
 					.container
 						h1.banner-title Спецтехника оптом и в розницу
 						div.order-button Оставьте заявку
-						.price-download
-							i.fa.fa-download
-							a.price-button Прайс-лист
+						.price-container
+							.price-download
+								i.fa.fa-download
+								a.price-button Прайс-лист
 				a.arrow-down
 					i.fa.fa-angle-down
 			.content
-				.section.section-comnpany
+				.section.section-comnpany#company
 					.container
 						h3.section-title О компании
 						.section-content
 							.section-row.clearfix
 								.section-col.section-col-2.company-info
-									.company-info-text Наша компания предлагает своим клиентам только высококачественную, надежную и многофункциональную спецтехнику широкого профиля. Наши клиенты знают, что такое доверие и надежный поставщик уже не первый год.
+									.company-info-container
+										h3.company-info-title ATM consulting
+										.company-info-text Наша компания предлагает своим клиентам только высококачественную, надежную и многофункциональную спецтехнику широкого профиля. Наши клиенты знают, что такое доверие и надежный поставщик уже не первый год.
 								.section-col.section-col-2.company-info
 									.section-col-bgimg(style='background-image:url(img/banner3.jpg)')
-				.section.section-benefits(style='background:white')
+				.section.section-benefits(style='background:#fff')
 					.container
 						h3.section-title Почему мы
 						.section-content
@@ -65,106 +68,175 @@ html.loading(lang='en')
 							.row.clearfix
 								.col-3.benefit-block-item
 									.benefit-container
-										img.icon-benefit(src='icons/ассортимент.png')
+										img.icon-benefit(src='icons/assortment.svg')
 										h4.benefit-title Большой ассортимент
-										p.benefit-text
+										p.benefit-text Огромный ассортимент продукции
 								.col-3.benefit-block-item
 									.benefit-container
-										img.icon-benefit(src='icons/гарантия.png')
+										img.icon-benefit(src='icons/garanty.svg')
 										h4.benefit-title Гарантия качества
-										p.benefit-text
+										p.benefit-text Гарантии качества товара
 								.col-3.benefit-block-item
 									.benefit-container
-										img.icon-benefit(src='icons/оплата.png')
+										img.icon-benefit(src='icons/payment.svg')
 										h4.benefit-title Способы оплаты
-										p.benefit-text
+										p.benefit-text Наиболее удобные для Вас способы оплаты
 							.row.clearfix
 								.col-3.benefit-block-item
 									.benefit-container
-										img.icon-benefit(src='icons/поддержка.png')
+										img.icon-benefit(src='icons/service.svg')
 										h4.benefit-title Обслуживание
-										p.benefit-text
+										p.benefit-text Длительное сервисное обслуживание
 								.col-3.benefit-block-item
 									.benefit-container
-										img.icon-benefit(src='icons/поставщик.png')
+										img.icon-benefit(src='icons/suppliers.svg')
 										h4.benefit-title Крупные поставщики
-										p.benefit-text
+										p.benefit-text Несколько поставщиков из Китая
 								.col-3.benefit-block-item
 									.benefit-container
-										img.icon-benefit(src='icons/логистика.png')
+										img.icon-benefit(src='icons/shipping.svg')
 										h4.benefit-title Транспортировка
-										p.benefit-text
-				.section.section-brands
+										p.benefit-text Доставку спецтехники в любой регион СНГ
+				.section.section-brands#machinery
 					.container
 						.section-content
 							h3.section-title Спецтехника
-							.section-row.clearfix(style='height:160px;line-height:160px;background:#fff;box-shadow:0px 2px 4px 0px rgba(0, 0, 0, 0.1)')
+							.section-row.clearfix(style='height:200px;line-height:200px;background:#fff;')
 								.section-col.section-col-4
 									.section-col-img-container
 										img.section-col-img(src='img/shacman.png')
 									.brand-link-container
-										a.brand-link Подробнее
+										a.brand-link(href='http://www.shacman.com/' target='_blank') Подробнее
 								.section-col.section-col-4
 									.section-col-img-container
 										img.section-col-img(src='img/howo.png', style='height:80px;width:100px')
 									.brand-link-container
-										a.brand-link Подробнее
+										a.brand-link(href='http://www.snsc-group.com/' target='_blank') Подробнее
 								.section-col.section-col-4
 									.section-col-img-container
 										img.section-col-img(src='img/faw.png' style='height:80px;width:100px')
 									.brand-link-container
-										a.brand-link Подробнее
+										a.brand-link(href='http://www.china-faw.com/' target='_blank') Подробнее
 								.section-col.section-col-4.col-last
 									.section-col-img-container
 										img.section-col-img(src='img/xcmg.png')
 									.brand-link-container
-										a.brand-link Подробнее
+										a.brand-link(href='http://www.xcmg.com/ru-cis/' target='_blank') Подробнее
 				.section.section-products
 					.container
 						.section-content.section-content-products
 							h3.section-title Мы предлагаем
 							.section-row.clearfix
 								.section-col.section-col-7
+									span.product-name Бетоновоз
+									.product-container.active(style='display:block')
+											.product-container-img
+												img.product-img(src='img/concretetruck.jpg')
+											.product-container-info
+												h3.product-info-title Бетоновоз
+												p.product-info-text Бетоновоз представляет собой машину, предназначенную для транспортировки бетонов либо цемента, которые используются на всевозможных воздвигающихся объектах. Конструкция бетоновоза создана с учетом особенностей транспортируемого груза (тяжеловесность бетона, обусловленную такими весьма тяжелыми составляющими, как цемент и песок). Данная машина обладает высокой грузоподъемностью, а также усиленной подвеской.
+								.section-col.section-col-7
 									span.product-name Трактор
 									.product-container
 										.product-container-img
-										.produtct-container-info
-								.section-col.section-col-7
-									span.product-name Автовоз
-									.product-container
-										img.product-container-img(src='img/автовоз.jpg')
+											img.product-img(src='img/tractor.jpg')
 										.product-container-info
-											h3.product-info-title Автовоз
-											p.product-info-text Автомобилевоз или автовоз это специальное транспортное средство, предназначенное для перевозки автомобилей. Автовоз состоит из тягача и специального прицепа или полуприцепа. В народе автовозы еще по-простому называют «возы» с ударением на второй слог. Стандартный автовоз рассчитан на перевозку 7-8 автомобилей класса «В». Все автовозы стоит разделить на две большие группы, отечественные и импортные.
-								.section-col.section-col-7
-									span.product-name Автоподъемник
-									.product-container
-										.product-container-img
-										.produtct-container-info
-								.section-col.section-col-7
-									span.product-name Каток
-									.product-container
-										.product-container-img
-										.produtct-container-info
-								.section-col.section-col-7
-									span.product-name Автокран
-									.product-container
-										.product-container-img
-										.produtct-container-info
+											h3.product-info-title Трактор
+											p.product-info-text Трактор, четырехколесная или гусеничная машина, передвигающая и приводящая в действие тяжелую технику. Применяются в основном в сельском хозяйстве и строительстве. Современные тракторы имеют бензиновые или дизельные двигатели и могут управлять разнообразной техникой - сенокосилками, передвижными прессами, опрыскивателями и т.д. Некоторые тракторы работают без водителя - их действиями управляет компьютер, используя разновидность ГЛОБАЛЬНОЙ СИСТЕМЫ НАВИГАЦИИ (ГСН) для определения местонахождения трактора.
 								.section-col.section-col-7
 									span.product-name Самосвал
 									.product-container
 										.product-container-img
-										.produtct-container-info
+											img.product-img(src='img/tipper.jpg')
+										.product-container-info
+											h3.product-info-title Самосвал
+											p.product-info-text Самосва́л — грузовой саморазгружающийся автомобиль, прицеп или полуприцеп с кузовом, механически наклоняемым для выгрузки груза или с принудительной разгрузкой (например, шнеком). Самосвалы применяются для перевозки навалочных, или сыпучих, или иных грузов, пригодных для такой выгрузки, которая производится посредством их опрокидывания из кузова.
 								.section-col.section-col-7
-									span.product-name Бетоновоз
-									.product-container(style='display:block')
-										.product-container-inner.row.clearfix
-											.product-container-img.col-2-30(style='margin-right:30px')
-												img.product-img(src='img/бетоновоз1.jpg')
-												img.product-img(src='img/бетоновоз2.jpg' style='margin-top:30px')
-											.product-container-info.col-2-30
-												h3.product-info-title Бетоновоз
-												p.product-info-text Автомобилевоз или автовоз это специальное транспортное средство, предназначенное для перевозки автомобилей. Автовоз состоит из тягача и специального прицепа или полуприцепа. В народе автовозы еще по-простому называют «возы» с ударением на второй слог. Стандартный автовоз рассчитан на перевозку 7-8 автомобилей класса «В». Все автовозы стоит разделить на две большие группы, отечественные и импортные.
-
+									span.product-name Автокран
+									.product-container
+										.product-container-img
+											img.product-img(src='img/carcrane.jpg')
+										.product-container-info
+											h3.product-info-title Автокран
+											p.product-info-text Автомобильный кран, это кран стрелового типа. Такая разновидность, спец техники, может быть оснащена башенно-стреловым оборудованием. Таким образом он может перемещаться с грузом или без груза. Этому способствует, непосредственно стрела и сила тяжести. Благодаря которой, ему не требуется специальные пути и особая устойчивость. Автокран, является самым распространенным транспортным средством, которые входят в группу стреловых самоходных кранов.
+								.section-col.section-col-7
+									span.product-name Каток
+									.product-container
+										.product-container-img
+											img.product-img(src='img/roadroller.jpg')
+										.product-container-info
+											h3.product-info-title Каток
+											p.product-info-text Като́к — машина, предназначенная для послойного уплотнения несвязных и малосвязных грунтов и оснований при постройке насыпей, дамб, дорожных оснований и других земляных сооружений на строительстве автомобильных дорог, аэродромов, гидротехнических сооружений. Рабочим органом катка являются колеса и/или валец  — цилиндр, расположенный вместо колеса или колёс. Своей массой каток сдавливает уплотняемое вещество.
+								.section-col.section-col-7
+									span.product-name Автовоз
+									.product-container
+										.product-container-img
+											img.product-img(src='img/cartrailer.jpg')
+										.product-container-info
+											h3.product-info-title Автовоз
+											p.product-info-text Автомобилевоз или автовоз это специальное транспортное средство, предназначенное для перевозки автомобилей. Автовоз состоит из тягача и специального прицепа или полуприцепа. В народе автовозы еще по-простому называют «возы» с ударением на второй слог. Стандартный автовоз рассчитан на перевозку 7-8 автомобилей класса «В». Все автовозы стоит разделить на две большие группы, отечественные и импортные.
+								.section-col.section-col-7
+									span.product-name Экскаватор
+									.product-container
+										.product-container-img
+											img.product-img(src='img/excavator.jpg')
+										.product-container-info
+											h3.product-info-title Экскаватор
+											p.product-info-text Экскава́тор — основной тип землеройных машин, оснащённых ковшом. Основным назначением является разработка грунтов (горных пород, полезных ископаемых) и погрузка сыпучих материалов. Главным отличием одноковшового экскаватора от других землеройных машин является то, что экскавация (выемка) грунта производится подвижным рабочим органом при неподвижном шасси. Поворот ковша на разгрузку также производится при стоящей машине.
+							.price-list
+								a.price-list-button Скачать прайс-лист
+				.section.section-form#contacts
+					.container
+						.section-content.section-content-form
+							h3.section-title Контакты
+							.row.clearfix
+								.col-2-30
+									.contact-form
+										h4.contact-form-title Вы можете связаться с нами:
+										.contact-form-container
+											.contact-form-phonenumber
+												i.fa.fa-lg.fa-phone
+												span.phone +7 (777) 801-83-83
+											.contact-form-email
+												i.fa.fa-lg.fa-envelope-o
+												span.email ts-machinery@mail.ru
+								.col-2-30
+									.submit-form
+										h4.submit-form-title Оставьте заявку
+										.form
+											.form-field
+												label.form-label(for='name') Имя:
+												input.form-input(type='text', name='name')
+											.form-field
+												label.form-label(for='phone') Телефон:
+												input.form-input(type='text', name='phone')
+											.form-field
+												label.form-label(for='email') Эл.адрес:
+												input.form-input(type='text', name='email')
+											.form-field
+												label.form-label(for='text') Сообщение:
+												textarea.form-input(name='text')
+											.form-field
+												span.submit-button.enabled Отправить
+											.form-message
 			.footer
+				.container
+					.row.clearfix
+						.col-4
+							.col-footer-item
+								i.fa.fa-lg.fa-phone-square
+								span +7 (777) 801-83-83
+						.col-4
+							.col-footer-item
+								i.fa.fa-lg.fa-map-marker
+								span 05000, Казахстан, г. Алматы
+						.col-4
+							.col-footer-item
+								i.fa.fa-lg.fa-envelope
+								span ts_machinery@mail.ru
+						.col-4
+							.col-footer-item
+								i.fa.fa-lg.fa-clock-o
+								span Пн-Пт с 9:00/18:00
+
+		script(src="./js/slider.js")
