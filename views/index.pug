@@ -55,16 +55,16 @@ html.loading(lang='en')
 				.section.section-comnpany#company
 					.container
 						h3.section-title О компании
-						.section-content
-							.section-row.clearfix
-								.section-col.section-col-2.company-info
+						.section-content.about-us
+							.row
+								.section-col.section-col-2.company-info(style='width:40%')
 									.company-info-container
 										h3.company-info-title ATM consulting
 										p.company-info-text2 Наша компания предлагает своим клиентам только высококачественную, надежную и многофункциональную спецтехнику широкого профиля. Наши клиенты знают, что такое доверие и надежный поставщик уже не первый год.
-								.section-col.section-col-2.company-info
+								.section-col.section-col-2.company-info(style='width:60%')
 									.section-col-bgimg(style='background-image:url(img/banner3.jpg)')
 									.section-col-overlay
-										p.company-info-text(style='font-size:20px;margin-bottom:20px') Что мы предлагаем вам
+										p.company-info-text(style='font-size:20px;margin-bottom:15px') Что мы предлагаем вам
 										p.company-info-text Занимаясь поставкой спецтехники в Казахстан и страны СНГ уже не первый год, мы выработали своеобразный принцип работы с нашими клиентами, который обеспечивает 100% эффективный отклик даже в крупных корпораций. У нас заказывать всегда легко, быстро и удобно. Для Вас мы не просто рядовой поставщик, а компания которая обеспечивает:​
 										p.company-info-text - Надежную поставку любой спецтехники;​
 										p.company-info-text - Полезное сотрудничество с постоянными явными выгодами;​
@@ -74,79 +74,85 @@ html.loading(lang='en')
 					.container
 						.section-content.section-content-products
 							h3.section-title Спецтехника
-							.row.clearfix
-								.col-6-20
-									img.col-6-img(src='icons/betonovoz.png')
-								.col-6-20
-									img.col-6-img(src='icons/traktor.png')
-								.col-6-20
-									img.col-6-img(src='icons/samosval.png')
-								.col-6-20
-									img.col-6-img(src='icons/avtokran.png')
-								.col-6-20
-									img.col-6-img(src='icons/katok.png')
-								.col-6-20
-									img.col-6-img(src='icons/eskavator.png')
-							.price-list
-								a.price-list-button Скачать прайс-лист
-							.section-row.clearfix
-								.section-col.section-col-7
-									span.product-name Бетоновоз
+							.row
+								.col-7.product-box
+									.product-icon-wrapper
+										img.product-icon(src='icons/betonovoz.png')
+									.product-name-wrapper
+										span.product-name Бетоновоз
 									.product-container.active(style='display:block')
 											.product-container-img
 												img.product-img(src='img/concretetruck.jpg')
 											.product-container-info
 												h3.product-info-title Бетоновоз
 												p.product-info-text Бетоновоз представляет собой машину, предназначенную для транспортировки бетонов либо цемента, которые используются на всевозможных воздвигающихся объектах. Конструкция бетоновоза создана с учетом особенностей транспортируемого груза (тяжеловесность бетона, обусловленную такими весьма тяжелыми составляющими, как цемент и песок). Данная машина обладает высокой грузоподъемностью, а также усиленной подвеской.
-								.section-col.section-col-7
-									span.product-name Трактор
+								.col-7.product-box
+									.product-icon-wrapper
+										img.product-icon(src='icons/traktor.png')
+									.product-name-wrapper
+										span.product-name Трактор
 									.product-container
 										.product-container-img
 											img.product-img(src='img/tractor.jpg')
 										.product-container-info
 											h3.product-info-title Трактор
 											p.product-info-text Трактор, четырехколесная или гусеничная машина, передвигающая и приводящая в действие тяжелую технику. Применяются в основном в сельском хозяйстве и строительстве. Современные тракторы имеют бензиновые или дизельные двигатели и могут управлять разнообразной техникой - сенокосилками, передвижными прессами, опрыскивателями и т.д. Некоторые тракторы работают без водителя - их действиями управляет компьютер, используя разновидность ГЛОБАЛЬНОЙ СИСТЕМЫ НАВИГАЦИИ (ГСН) для определения местонахождения трактора.
-								.section-col.section-col-7
-									span.product-name Самосвал
+								.col-7.product-box
+									.product-icon-wrapper
+										img.product-icon(src='icons/samosval.png')
+									.product-name-wrapper
+										span.product-name Самосвал
 									.product-container
 										.product-container-img
 											img.product-img(src='img/tipper.jpg')
 										.product-container-info
 											h3.product-info-title Самосвал
 											p.product-info-text Самосва́л — грузовой саморазгружающийся автомобиль, прицеп или полуприцеп с кузовом, механически наклоняемым для выгрузки груза или с принудительной разгрузкой (например, шнеком). Самосвалы применяются для перевозки навалочных, или сыпучих, или иных грузов, пригодных для такой выгрузки, которая производится посредством их опрокидывания из кузова.
-								.section-col.section-col-7
-									span.product-name Автокран
+								.col-7.product-box
+									.product-icon-wrapper
+										img.product-icon(src='icons/avtokran.png')
+									.product-name-wrapper
+										span.product-name Автокран
 									.product-container
 										.product-container-img
 											img.product-img(src='img/carcrane.jpg')
 										.product-container-info
 											h3.product-info-title Автокран
 											p.product-info-text Автомобильный кран, это кран стрелового типа. Такая разновидность, спец техники, может быть оснащена башенно-стреловым оборудованием. Таким образом он может перемещаться с грузом или без груза. Этому способствует, непосредственно стрела и сила тяжести. Благодаря которой, ему не требуется специальные пути и особая устойчивость. Автокран, является самым распространенным транспортным средством, которые входят в группу стреловых самоходных кранов.
-								.section-col.section-col-7
-									span.product-name Каток
+								.col-7.product-box
+									.product-icon-wrapper
+										img.product-icon(src='icons/katok.png')
+									.product-name-wrapper
+										span.product-name Каток
 									.product-container
 										.product-container-img
 											img.product-img(src='img/roadroller.jpg')
 										.product-container-info
 											h3.product-info-title Каток
 											p.product-info-text Като́к — машина, предназначенная для послойного уплотнения несвязных и малосвязных грунтов и оснований при постройке насыпей, дамб, дорожных оснований и других земляных сооружений на строительстве автомобильных дорог, аэродромов, гидротехнических сооружений. Рабочим органом катка являются колеса и/или валец  — цилиндр, расположенный вместо колеса или колёс. Своей массой каток сдавливает уплотняемое вещество.
-								.section-col.section-col-7
-									span.product-name Автовоз
+								.col-7.product-box
+									.product-icon-wrapper
+										img.product-icon(src='icons/avtovoz.png')
+									.product-name-wrapper
+										span.product-name Автовоз
 									.product-container
 										.product-container-img
 											img.product-img(src='img/cartrailer.jpg')
 										.product-container-info
 											h3.product-info-title Автовоз
 											p.product-info-text Автомобилевоз или автовоз это специальное транспортное средство, предназначенное для перевозки автомобилей. Автовоз состоит из тягача и специального прицепа или полуприцепа. В народе автовозы еще по-простому называют «возы» с ударением на второй слог. Стандартный автовоз рассчитан на перевозку 7-8 автомобилей класса «В». Все автовозы стоит разделить на две большие группы, отечественные и импортные.
-								.section-col.section-col-7
-									span.product-name Экскаватор
+								.col-7.product-box
+									.product-icon-wrapper
+										img.product-icon(src='icons/eskavator.png')
+									.product-name-wrapper
+										span.product-name Экскаватор
 									.product-container
 										.product-container-img
 											img.product-img(src='img/excavator.jpg')
 										.product-container-info
 											h3.product-info-title Экскаватор
 											p.product-info-text Экскава́тор — основной тип землеройных машин, оснащённых ковшом. Основным назначением является разработка грунтов (горных пород, полезных ископаемых) и погрузка сыпучих материалов. Главным отличием одноковшового экскаватора от других землеройных машин является то, что экскавация (выемка) грунта производится подвижным рабочим органом при неподвижном шасси. Поворот ковша на разгрузку также производится при стоящей машине.
-				.section.section-benefits(style='background:#fff')
+				.section.section-benefits
 					.container
 						h3.section-title Почему мы
 						.section-content
@@ -240,5 +246,14 @@ html.loading(lang='en')
 							.col-footer-item
 								i.fa.fa-lg.fa-clock-o
 								span Пн-Пт с 9:00/18:00
-
+		.overlay-wrapper
+			.popup-form-wrapper
+				h4.popup-form-title
+				.form.popup-form
+					.form-field
+						label.form-label(for='name') Имя:
+						input.form-input(type='text', name='name')
+					.form-field
+						label.form-label(for='phone') Телефон:
+						input.form-input(type='text', name='phone')
 		script(src="./js/slider.js")

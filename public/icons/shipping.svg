@@ -4,8 +4,8 @@
 	 viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
   <defs>
     <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%"   stop-color="#ff7778"/>
-      <stop offset="100%" stop-color="#CF4647"/>
+      <stop offset="0%"   stop-color="#fff"/>
+      <stop offset="100%" stop-color="#fdb2b3"/>
     </linearGradient>
   </defs>
   <style>
