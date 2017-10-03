@@ -32,11 +32,10 @@ html.loading(lang='en')
 								a.nav-link(href='#contacts') Контакты
 					.header.header-right
 						.phone-number
-							i.fa.fa-lg.fa-phone
-							span Позвоните нам
 							.phone-number-drop
-								.phome-number-item +7 (777) 801-83-83
 								.phone-number-item +7 (727) 383-18-46
+								.phome-number-item +7 (777) 801-83-83
+								.phome-number-item +7 (705) 262-88-88
 			.header.header-sticky
 			.page-banner
 				.overlay
@@ -198,12 +197,22 @@ html.loading(lang='en')
 									.contact-form
 										h4.contact-form-title Вы можете связаться с нами:
 										.contact-form-container
-											.contact-form-phonenumber
-												i.fa.fa-lg.fa-phone
-												span.phone +7 (777) 801-83-83
-											.contact-form-email
-												i.fa.fa-lg.fa-envelope-o
-												span.email ts-machinery@mail.ru
+											.contact-form-phonenumber.row
+												.icon-wrapper
+													i.fa.fa-lg.fa-phone
+												.info-wrapper
+													span.phone +7 (727) 383-18-46
+													br
+													span.phone +7 (777) 801-83-83
+													br
+													span.phone +7 (705) 262-88-88
+											.contact-form-email.row
+												.icon-wrapper
+													i.fa.fa-lg.fa-envelope-o
+												.info-wrapper
+													span.email ts-machinery@mail.ru
+													br
+													span.email atm-consulting@mail.ru
 								.col-2-30
 									.submit-form
 										h4.submit-form-title Оставьте заявку
@@ -225,23 +234,29 @@ html.loading(lang='en')
 											.form-message
 			.footer
 				.container
-					.row.clearfix
+					.row
 						.col-4
-							.col-footer-item.row.clearfix
+							.col-footer-item.row
 								.icon-wrapper
 									i.fa.fa-lg.fa-phone-square
 								.info-wrapper
+									span +7 (727) 383-18-46
+									br
 									span +7 (777) 801-83-83
 									br
-									span +7 (727) 383-18-46
+									span +7 (705) 262-88-88
 						.col-4
 							.col-footer-item
 								i.fa.fa-lg.fa-map-marker
 								span 05000, Казахстан, г. Алматы
 						.col-4
-							.col-footer-item
-								i.fa.fa-lg.fa-envelope
-								span ts_machinery@mail.ru
+							.col-footer-item.row
+								.icon-wrapper
+									i.fa.fa-lg.fa-envelope
+								.info-wrapper
+									span ts_machinery@mail.ru
+									br
+									span atm-consulting@mail.ru
 						.col-4
 							.col-footer-item
 								i.fa.fa-lg.fa-clock-o

@@ -87,7 +87,8 @@ ul{
 .contact-form-container{
 	position: absolute;
 	font-size: 20px;
-	color: #777;
+	color: #e2e2e2;
+	min-width: 300px;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -20%);
@@ -349,6 +350,7 @@ ul{
 	cursor: pointer;
 }
 .phone-number > .fa{
+	display: inline-block;
 	color: #EE3524;
 	margin-right: 10px;
 }
@@ -359,25 +361,8 @@ ul{
 	margin-left: 16px;
 }
 .phone-number-drop{
-	padding-left: 15px;
-	padding-right: 15px;
-	position: absolute;
-	visibility: hidden;
-	opacity: 0;
-	right: 15px;
-	top: 200%;
-	width: 60%;
-	text-align: right;
-	padding: 15px;
-	color: #EE3524;
+	display: inline-block;
 	border-radius: 3px;
-	transition: all .6s ease;
-}
-.phone-number:hover > .phone-number-drop{
-	background: #fff;
-	top: 120%;
-	visibility: visible;
-	opacity: 1;
 }
 .header-sticky{
 
@@ -628,6 +613,13 @@ textarea{
 }
 .col-footer-item span{
 	margin-left: 10px;
+}
+.info-wrapper{
+	text-align: left;
+}
+.phones-block{
+	display: inline-block;
+	text-align: left;
 }
 .footer .fa{
 	color: #EE3524;
