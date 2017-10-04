@@ -15,7 +15,7 @@ app.get('/', (req, res)=>{
 });
 
 app.get('/price', (req, res)=>{
-	res.sendFile(`${__dirname}/public/static/Каталог ТОО АТМ.ppt`);
+	res.sendFile(`${__dirname}/public/static/pricelist.ppt`);
 });
 
 app.get('/:page?', (req,res)=>{

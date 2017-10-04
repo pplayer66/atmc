@@ -33,12 +33,7 @@ var resumeTimer = function() {
 resumeTimer();
 
 $('.price-download').click(function() {
-	$.ajax({
-		url: '/price/Каталог ТОО АТМ.ppt',
-		type: 'GET',
-		success: function() {console.log('ok')},
-		error: function() {console.log('error')}
-	})
+	window.location.href='/price';
 });
 
 $('.nav-link').click(function(e){
