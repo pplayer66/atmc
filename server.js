@@ -3,6 +3,7 @@ var fs = require('fs');
 // const favicon = require('serve-favicon');
 const path = require('path');
 const Product = require('./models/Product');
+const axios = require('axios');
 
 const app = express();
 const port = process.env.PORT || 3000;
