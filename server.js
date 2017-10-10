@@ -3,6 +3,7 @@ var fs = require('fs');
 // const favicon = require('serve-favicon');
 const path = require('path');
 const Product = require('./models/Product');
+const request = require('request');
 const axios = require('axios');
 
 const app = express();
@@ -39,13 +40,9 @@ app.get('/makearray', (req, res)=>{
 	  	})
 	  	// res.send(descr);
 	  	console.log(descr);
-	    axios.get('/getlist').then((resp)=>{
-	    	res.send(resp);
-	    	// console.log('asdhjakshdjkashdjkahsjkdhasjhdjkashdkjahsjkdhjkJHASJKDHAKSJHDKJASHDJKHASKD');
-	    	// loadData();
-	    }).catch(function(err) {
-	    	console.log(err);
-	    })
+			request('/add?model=Автокран ZLJ5322JQZ30V', function (error, response, body) {
+			  res.send(response);
+			});
 	});
 })
 
