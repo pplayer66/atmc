@@ -2,7 +2,6 @@ const express = require('express');
 var fs = require('fs');
 // const favicon = require('serve-favicon');
 const path = require('path');
-const fs = require('fs');
 const Product = require('./models/Product');
 
 const app = express();
