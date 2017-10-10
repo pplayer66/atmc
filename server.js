@@ -19,7 +19,7 @@ app.get('/', (req, res)=>{
 function loadData() {
 	if (descr.length) {
 		const {field, value} = descr.shift().split(': ');
-		axios(`http://atmc2.herokuapp.com/update?model=${array[0]}&field=${field}&value=${value}`).then(function(resp) {
+		axios.get(`http://atmc2.herokuapp.com/update?model=${array[0]}&field=${field}&value=${value}`).then(function(resp) {
 			if (resp)
 				return loadData();
 		})
@@ -39,10 +39,10 @@ app.get('/makearray', (req, res)=>{
 	  	})
 	  	// res.send(descr);
 	  	console.log(descr);
-	    axios.get(`http://atmc2.herokuapp.com/add?model=${array[0]}`).then((resp)=>{
+	    axios.get('http://atmc2.herokuapp.com/getlist').then((resp)=>{
 	    	res.send(resp);
 	    	// console.log('asdhjakshdjkashdjkahsjkdhasjhdjkashdkjahsjkdhjkJHASJKDHAKSJHDKJASHDJKHASKD');
-	    	loadData();
+	    	// loadData();
 	    }).catch(function(err) {
 	    	console.log(err);
 	    })
