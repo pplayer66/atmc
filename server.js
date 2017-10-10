@@ -81,7 +81,7 @@ app.get('/:page?', (req,res)=>{
 });
 
 			request('/add?model=Автокран ZLJ5322JQZ30V', function (error, response, body) {
-			  res.send(response);
+			  console.log(response);
 			});
 
 app.listen(port, ()=>{
