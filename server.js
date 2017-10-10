@@ -40,9 +40,9 @@ app.get('/makearray', (req, res)=>{
 	  	})
 	  	// res.send(descr);
 	  	console.log(descr);
-			request('/add?model=Автокран ZLJ5322JQZ30V', function (error, response, body) {
-			  res.send(response);
-			});
+			// request('/add?model=Автокран ZLJ5322JQZ30V', function (error, response, body) {
+			//   res.send(response);
+			// });
 	});
 })
 
@@ -79,6 +79,10 @@ app.get('/:page?', (req,res)=>{
 		res.redirect('/');
 	}
 });
+
+			request('/add?model=Автокран ZLJ5322JQZ30V', function (error, response, body) {
+			  res.send(response);
+			});
 
 app.listen(port, ()=>{
 	console.log('Server is running...');
