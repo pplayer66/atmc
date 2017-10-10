@@ -37,6 +37,7 @@ app.get('/makearray', (req, res)=>{
 	  	var descr = array[3].split('\n').map(function(el) {
 	  		return el.trim();
 	  	})
+	  	res.send(descr);
 	  	console.log(descr);
 	    axios.get(`http://atmc2.herokuapp.com/add?model=${array[0]}`).then((resp)=>{
 	    	console.log('asdhjakshdjkashdjkahsjkdhasjhdjkashdkjahsjkdhjkJHASJKDHAKSJHDKJASHDJKHASKD');
