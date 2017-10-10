@@ -39,7 +39,7 @@ app.get('/makearray', (req, res)=>{
 	  	})
 	  	// res.send(descr);
 	  	console.log(descr);
-	    axios.get('http://atmc2.herokuapp.com/getlist').then((resp)=>{
+	    axios.get('/getlist').then((resp)=>{
 	    	res.send(resp);
 	    	// console.log('asdhjakshdjkashdjkahsjkdhasjhdjkashdkjahsjkdhjkJHASJKDHAKSJHDKJASHDJKHASKD');
 	    	// loadData();
