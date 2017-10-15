@@ -3,11 +3,14 @@ const express = require('express');
 // const path = require('path');
 const mongoose = require('./db/mongoose');
 const Product = require('./models/Product');
+const bp = require('body-parser');
 
 const app = express();
 const port = process.env.PORT || 3000;
 
 // app.use(favicon(path.join(__dirname, 'favicon', 'favicon.ico')));
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 app.set('view engine', 'pug');
 app.use(express.static('public'))
 
@@ -33,23 +36,23 @@ app.get('/drop', (req, res)=>{
 	});
 })
 
-app.get('/add', (req, res)=>{
-	const {model, feat, desc, mtype} = req.query;
+app.post('/add', (req, res)=>{
+	const {model, mtype, desc, feat} = req.body;
 	if (desc){
-		Product.findOneAndUpdate({model}, {$push: {description: {field, value}}}, function(err, descr) {
-			res.send('ok');
+		Product.update({model}, {$push: {description: {field, value}}}, function(err, result) {
+			res.send('desc saved');
 		});
-	}else if (feat){
-		Product.findOneAndUpdate({model}, {$push: {description: {field, value}}}, function(err, feature) {
-			res.send('ok');
+	}else if(feat){
+		Product.update({model}, {$push: {features: {field, value}}}, function(err, result) {
+			res.send('features saved');
 		});
-	}else if (mtype){
-		Product.findOneAndUpdate({model}, {$set: {mtype}}, function(err, mtype) {
-			res.send('ok');
+	}else if(mtype){
+		Product.update({model}, {$set: {mtype}}, function(err, result) {
+			res.send('mtype saved');
 		});
 	}else{
 		new Product({model}).save(function(err, result) {
-			res.send(result);
+			res.send('product saved');
 		});
 	}
 });
