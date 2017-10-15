@@ -16,15 +16,17 @@ fs.readFile('./model.txt', function(err, content) {
 		axios.post(qs, {model, mtype}).then(function(result) {
 			console.log(result.data);
 			const featArr = feat.split('@');
-			const currentFeature = featArr.shift();
-			const currentFeatureArr = currentFeature.split(':');
-			const field = currentFeatureArr[0].trim();
-			const value = currentFeatureArr[1].trim();
-			console.log(field);
-			console.log(value);
-			axios.post(qs, {model, feat:'1', field, value}).then(function(result) {
-				console.log(result.data);
-			})
+			while(featArr.length){
+				const currentFeature = featArr.shift().replace(/[\n\r]/g, '');
+				const currentFeatureArr = currentFeature.split(':');
+				const field = currentFeatureArr[0];
+				const value = currentFeatureArr[1].trim();
+				console.log(field);
+				console.log(value);
+				axios.post(qs, {model, feat:'1', field, value}).then(function(result) {
+					console.log(result.data);
+				});
+			}
 		});
 	});
 });
