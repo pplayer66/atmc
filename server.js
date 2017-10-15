@@ -30,6 +30,12 @@ app.get('/', (req, res)=>{
 // 	}
 // };
 
+app.get('/del', (req, res)=>{
+	Product.findOneAndRemove({model: req.query.model}, function(err, result) {
+		res.send('deleted');
+	});
+})
+
 app.get('/drop', (req, res)=>{
 	mongoose.connection.db.dropDatabase(()=>{
 		res.send('database has been dropped');
