@@ -1,10 +1,8 @@
 const express = require('express');
-var fs = require('fs');
 // const favicon = require('serve-favicon');
-const path = require('path');
+// const path = require('path');
+const mongoose = require('./db/mongoose');
 const Product = require('./models/Product');
-const request = require('request');
-const axios = require('axios');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -17,55 +15,47 @@ app.get('/', (req, res)=>{
 	res.render('index');
 });
 
-function loadData() {
-	if (descr.length) {
-		const {field, value} = descr.shift().split(': ');
-		axios.get(`http://atmc2.herokuapp.com/update?model=${array[0]}&field=${field}&value=${value}`).then(function(resp) {
-			if (resp)
-				return loadData();
-		})
-	}else{
-		return;
-	}
-};
+// function loadData() {
+// 	if (descr.length) {
+// 		const {field, value} = descr.shift().split(': ');
+// 		axios.get(`http://atmc2.herokuapp.com/update?model=${array[0]}&field=${field}&value=${value}`).then(function(resp) {
+// 			if (resp)
+// 				return loadData();
+// 		})
+// 	}else{
+// 		return;
+// 	}
+// };
 
-app.get('/makearray', (req, res)=>{
-	fs.readFile('./features.txt', function(err, f){
-	    var array = f.toString().split('&');
-	    var i = 3;
-	    var newarr = [];
-	    console.log(array);
-	  	var descr = array[3].split('\n').map(function(el) {
-	  		return el.trim();
-	  	})
-	  	// res.send(descr);
-	  	console.log(descr);
-			// request('/add?model=Автокран ZLJ5322JQZ30V', function (error, response, body) {
-			//   res.send(response);
-			// });
+app.get('drop', (req, res)=>{
+	mongoose.connection.db.dropDatabase(()=>{
+		res.send('database has been dropped');
 	});
 })
-
 
 app.get('/add', (req, res)=>{
-	console.log('asdas');
-	var product = new Product({model: req.query.model});
-	product.save((err, result)=>{
-		res.send(result);
-	})
+	const {model, feat, desc, mtype} = req.query;
+	if (desc){
+		Product.findOneAndUpdate({model}, {$push: {description: {field, value}}}, function(err, descr) {
+			res.send('ok');
+		});
+	}else if (feat){
+		Product.findOneAndUpdate({model}, {$push: {description: {field, value}}}, function(err, feature) {
+			res.send('ok');
+		});
+	}else if (mtype){
+		Product.findOneAndUpdate({model}, {$set: {mtype}}, function(err, mtype) {
+			res.send('ok');
+		});
+	}else{
+		new Product({model}).save(function(err, result) {
+			res.send('ok');
+		});
+	}
 });
 
-app.get('/update', (req, res)=>{
-	const {model, field, value} = req.query;
-	Product.update({model}, {$push: {description: {field, value} } }, (err, result)=>{
-			if (err)
-				return console.log(err);
-			res.send(result);
-	});
-})
-
 app.get('/getlist', (req, res)=>{
-	Product.find({model: 'Автокран ZLJ5322JQZ30V'}, function(err, items) {
+	Product.find({}, function(err, items) {
 		res.send(items);
 	})
 })
@@ -79,10 +69,6 @@ app.get('/:page?', (req,res)=>{
 		res.redirect('/');
 	}
 });
-
-			request('/add?model=Автокран ZLJ5322JQZ30V', function (error, response, body) {
-			  console.log(response);
-			});
 
 app.listen(port, ()=>{
 	console.log('Server is running...');
