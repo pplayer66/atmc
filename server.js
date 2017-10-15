@@ -9,7 +9,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // app.use(favicon(path.join(__dirname, 'favicon', 'favicon.ico')));
-app.use(bp.urlencoded({ extended: false }))
+app.use(bp.urlencoded({ extended: true }))
 app.use(bp.json())
 app.set('view engine', 'pug');
 app.use(express.static('public'))
