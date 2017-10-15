@@ -7,7 +7,8 @@ fs.readFile('./model.txt', function(err, content) {
 	});
 	var desc = arr[3].split('\n');
 	console.log(arr[0]);
-	axios.get(`http://atmc2.herokuapp.com/add?model=${arr[0]}`).then(function(result) {
+	var str1 = arr[0];
+	axios.get(`http://atmc2.herokuapp.com/add?model=${str1}`).then(function(result) {
 		console.log(result.data);
 		// var descTrimed = desc.map(function(item) {
 		// 	return {field: item.split(':').shift(), value: item[0]}
