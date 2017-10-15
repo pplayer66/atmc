@@ -64,11 +64,11 @@ app.get('/price', (req, res)=>{
 	res.sendFile(`${__dirname}/public/static/pricelist.ppt`);
 });
 
-app.get('/:page?', (req,res)=>{
-	if (req.params.page){
-		res.redirect('/');
-	}
-});
+// app.get('/:page?', (req,res)=>{
+// 	if (req.params.page){
+// 		res.redirect('/');
+// 	}
+// });
 
 app.listen(port, ()=>{
 	console.log('Server is running...');
