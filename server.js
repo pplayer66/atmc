@@ -27,7 +27,7 @@ app.get('/', (req, res)=>{
 // 	}
 // };
 
-app.get('drop', (req, res)=>{
+app.get('/drop', (req, res)=>{
 	mongoose.connection.db.dropDatabase(()=>{
 		res.send('database has been dropped');
 	});
