@@ -1,4 +1,5 @@
 const fs = require('fs');
+var qs = require('qs');
 const axios = require('axios');
 
 fs.readFile('./model.txt', function(err, content) {
@@ -6,9 +7,7 @@ fs.readFile('./model.txt', function(err, content) {
 		return item.replace(/[\n\r]/g, '');
 	});
 	var desc = arr[3].split('\n');
-	console.log(arr[0]);
-	var str1 = arr[0];
-	axios.get(`http://atmc2.herokuapp.com/add?model=${str1}`).then(function(result) {
+	axios.get('http://atmc2.herokuapp.com/add', qs.stringify({ model: arr[0]})).then(function(result) {
 		console.log(result.data);
 		// var descTrimed = desc.map(function(item) {
 		// 	return {field: item.split(':').shift(), value: item[0]}

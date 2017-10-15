@@ -49,7 +49,7 @@ app.get('/add', (req, res)=>{
 		});
 	}else{
 		new Product({model}).save(function(err, result) {
-			res.send('ok model');
+			res.send(result);
 		});
 	}
 });
