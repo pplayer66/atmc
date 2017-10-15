@@ -37,7 +37,7 @@ app.get('/drop', (req, res)=>{
 })
 
 app.post('/add', (req, res)=>{
-	const {model, mtype, desc, feat} = req.body;
+	const {model, mtype, desc, feat, field, value} = req.body;
 	if (desc){
 		Product.update({model}, {$push: {description: {field, value}}}, function(err, result) {
 			res.send('desc saved');
