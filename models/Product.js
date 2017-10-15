@@ -1,15 +1,15 @@
 const mongoose = require('mongoose');
 
 const productSchema = new mongoose.Schema({
-	model: String,
-	mtype: String,
+	model: {type:String, trim:true},
+	mtype: {type:String, trim:true},
 	features:
 	[
-		{field: String, value: String}
+		{field: {type:String, trim:true}, value: {type:String, trim:true}}
 	],
 	description: 
 	[
-		{field: String, value: String}
+		{field: {type:String, trim:true}, value: {type:String, trim:true}}
 	]
 });
 
