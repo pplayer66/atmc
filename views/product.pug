@@ -3,8 +3,46 @@ html(lang="en")
 	head
 		meta(charset="UTF-8")
 		title Document
+		link(rel="stylesheet", href="./css/product.css")
 	body
-		#header
+		.header
+			.container.row
+				.header-left
+					.logo-wrapper.clearfix
+						a.logo(href='http://www.atmc.kz')
+							img.logo-img(src='img/logo.png')
+					h2.logo-title ТОО "Almaty Trade & Management Consulting"
+				.header-center
+					ul.nav-menu
+						.nav-menu-item
+							a.nav-link(href='#header') Главная
+						.nav-menu-item
+							a.nav-link(href='#contacts') Спецтехника
+						.nav-menu-item
+							a.nav-link(href='#contacts') Контакты
+						.nav-menu-item
+							a.nav-link(href='#contacts') Оставьте заявку
+				.header-right
+					.phone-number
+						.phone-number-drop
+							.phone-number-item +7 (727) 383-18-46
+							.phone-number-item +7 (777) 801-83-83
+							.phone-number-item +7 (705) 262-88-88
+		.page-banner
+			.overlay
+		.products
 			.container
-		
+				each item in items
+				.product-content
+					.product-title.row
+						.product-img
+							img.product-img-src
+						.product-features
+							each feature in item.features
+								.product-feature
+									span feature.field
+									span feature.value
+					.product-description.row
+
+
 

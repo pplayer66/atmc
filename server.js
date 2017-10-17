@@ -18,17 +18,12 @@ app.get('/', (req, res)=>{
 	res.render('index');
 });
 
-// function loadData() {
-// 	if (descr.length) {
-// 		const {field, value} = descr.shift().split(': ');
-// 		axios.get(`http://atmc2.herokuapp.com/update?model=${array[0]}&field=${field}&value=${value}`).then(function(resp) {
-// 			if (resp)
-// 				return loadData();
-// 		})
-// 	}else{
-// 		return;
-// 	}
-// };
+app.get('/product', (req, res)=>{
+	Product.findOne({mtype: 'автовоз'}, function(err, items) {
+		res.render('product', {items});
+	});
+
+})
 
 app.get('/del', (req, res)=>{
 	Product.findOneAndRemove({model: req.query.model}, function(err, result) {

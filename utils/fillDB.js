@@ -15,7 +15,8 @@ fs.readFile('./model.txt', function(err, content) {
 	axios.post(qs, {model}).then(function(result) {
 		axios.post(qs, {model, mtype}).then(function(result) {
 			console.log(result.data);
-			const featArr = feat.split('@');
+			const featArr = feat.split("@");
+			console.log(featArr);
 			while(featArr.length){
 				const currentFeature = featArr.shift().replace(/[\n\r]/g, "");
 				const currentFeatureArr = currentFeature.split(': ');

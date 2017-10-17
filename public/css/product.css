@@ -1,0 +1,84 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Source Sans Pro', sans-serif;
+	outline: none !important;
+	box-sizing: border-box;
+}
+body{
+	background-image:url(../img/real_cf.png);
+	background-repeat: repeat;
+	overflow-x: hidden;
+}
+.row{
+	position: relative;
+}
+.row:after{
+	content: '.';
+	height: 0;
+	display: block;
+	clear: both;
+	visibility: hidden;
+}
+.row > div{
+	float: left;
+}
+.row > div:first-child{
+	margin-left: 0;
+}
+a{
+	text-decoration: none;
+	cursor: auto;
+}
+.container{
+	width: 960px;
+	margin: 0 auto;
+	position: relative;
+}
+.header{
+	position: absolute;
+	top: 0;
+	padding: 50px 0 30px;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	color: #fff;
+}
+.page-banner{
+	position: relative;
+	height: 500px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+	background: url(../img/banner.jpg);
+}
+.overlay{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	background: rgba(0,0,0,.5);
+}
+.product{
+	position: relative;
+	top: -100px;
+}
+.product-content{
+	border-radius: 4px;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	top: -100px;
+	height: 500px;
+	background: #fff;
+	z-index: 1000;
+}
+.product-img{
+	width: 30%;
+}
+.product-features{
+	width: 70%;
+}
